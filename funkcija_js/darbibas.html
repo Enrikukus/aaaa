@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Atzīmes</title>
+</head>
+<body>
+
+    <h2>Kādas ir iespējas ar JavaScript?</h2>
+    <p>JavaScript var mainīt atribūtu vērtības HTML.</p>
+    <p>Šajā gadījumā JavaScript maina attēla atribūta src (avota) vērtību zīmējumā.</p>
+
+    <!-- Image container where thumbs-up or thumbs-down image will appear -->
+    <div id="thumbContainer"></div>
+
+    <br><br>
+    <button onclick="incrementDislike()">Man nepatīk</button>
+    <button onclick="incrementLike()">Man patīk</button>
+
+    <p>Man patīk skaits: <span id="likeCount">0</span></p>
+    <p>Man nepatīk skaits: <span id="dislikeCount">0</span></p>
+
+    <script>
+        let likeCount = 0;
+        let dislikeCount = 0;
+
+        function incrementLike() {
+            likeCount++;
+            document.getElementById("likeCount").innerText = likeCount;
+
+            // Display thumbs-up image
+            const thumbContainer = document.getElementById("thumbContainer");
+            thumbContainer.innerHTML = '<img src="thumbs-up.png" alt="Thumb Up" width="50">';
+        }
+
+        function incrementDislike() {
+            dislikeCount++;
+            document.getElementById("dislikeCount").innerText = dislikeCount;
+
+            // Display thumbs-down image
+            const thumbContainer = document.getElementById("thumbContainer");
+            thumbContainer.innerHTML = '<img src="c:\Users\ekokoriss\Downloads\thumbs-up.png">';
+        }
+    </script>
+
+</body>
+</html>
